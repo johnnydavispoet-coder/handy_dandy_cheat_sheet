@@ -1,0 +1,15 @@
+my-website/
+├── index.html
+├── about.html
+├── contact.html
+├── css/
+│   ├── style.css
+│   └── responsive.css
+├── js/
+│   ├── script.js
+│   └── menu.js
+├── images/
+│   ├── me.jpg
+│   ├── logo.png
+│   └── background.jpg
+└── fonts/
