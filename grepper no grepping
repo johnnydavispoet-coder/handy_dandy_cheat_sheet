@@ -1,0 +1,1 @@
+grep -Ei "api[_-]?key|secret|token|jwt|bearer|authorization"
