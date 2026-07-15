@@ -1,0 +1,5 @@
+## All you need about installing and running a venv on Debian Linux
+# The command to install the venv
+python3 -m venv venv
+# The command to run the venv
+source venv/bin/activate
