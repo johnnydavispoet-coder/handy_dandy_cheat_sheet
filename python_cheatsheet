@@ -3,3 +3,13 @@
 python3 -m venv venv
 # The command to run the venv
 source venv/bin/activate
+
+# Install after making the venv
+pip install requests
+pip install beautifulsoup4
+pip install scapy
+pip install paramiko
+
+# When finished with the venv just type:
+deactivate
+
