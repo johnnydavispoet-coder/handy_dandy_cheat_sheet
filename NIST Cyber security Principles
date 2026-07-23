@@ -1,0 +1,55 @@
+NIST CSF Function	Purpose	Key Activities	Example
+Govern	Establish cybersecurity strategy, policies, and oversight.	• Security policies
+• Risk management
+• Compliance
+• Roles & responsibilities
+• Executive oversight
+• Third-party risk management	Create a company cybersecurity policy requiring annual security awareness training.
+Identify	Understand what assets exist and what risks they face.	• Asset inventory
+• Software inventory
+• Data classification
+• Risk assessments
+• Critical systems identification	Maintain an inventory of all company laptops, servers, applications, and cloud services.
+Protect	Implement safeguards to reduce the likelihood and impact of cyberattacks.	• Access control
+• Multi-Factor Authentication (MFA)
+• Encryption
+• Security awareness training
+• Patch management
+• Firewalls
+• Backups	Require MFA for all employee accounts and keep systems updated with security patches.
+Detect	Identify cybersecurity events as quickly as possible.	• Continuous monitoring
+• Log analysis
+• Intrusion Detection Systems (IDS)
+• SIEM tools
+• Threat monitoring	Detect repeated failed login attempts from an unusual location.
+Respond	Take action to contain and manage cybersecurity incidents.	• Incident response planning
+• Containment
+• Investigation
+• Communication
+• Malware removal
+• Evidence collection	Isolate an infected computer to stop ransomware from spreading across the network.
+Recover	Restore operations after an incident and improve future resilience.	• Disaster recovery
+• Business continuity
+• Data restoration
+• Lessons learned
+• Security improvements	Restore systems from backups and update security procedures after an incident.
+Quick Memory Guide
+Function	Simple Phrase
+Govern	Make the rules
+Identify	Know what you have
+Protect	Lock the doors
+Detect	Watch for trouble
+Respond	Fight the fire
+Recover	Rebuild and improve
+NIST CSF Workflow
+Govern
+   ↓
+Identify
+   ↓
+Protect
+   ↓
+Detect
+   ↓
+Respond
+   ↓
+Recover
