@@ -1,0 +1,128 @@
+Security Audit Phases
+Phase	Purpose	Key Activities	Deliverables
+1. Planning & Preparation	Define the audit scope and objectives.	Determine systems to audit, identify risks, gather documentation, assign team members, establish timeline.	Audit Plan, Scope Document
+2. Information Gathering	Understand the environment being audited.	Review policies, interview personnel, inventory assets, review architecture diagrams, identify applicable regulations.	Asset Inventory, Documentation Review
+3. Risk Assessment	Identify the organization's highest risks.	Evaluate threats, vulnerabilities, likelihood, impact, and existing controls.	Risk Assessment Report
+4. Control Evaluation	Determine whether security controls are effective.	Review administrative, technical, and physical controls against standards like NIST, ISO 27001, and CIS Controls.	Control Assessment
+5. Testing & Validation	Verify controls actually work.	Vulnerability scanning, configuration reviews, access reviews, log analysis, penetration testing (if authorized).	Test Results, Evidence
+6. Findings & Analysis	Analyze weaknesses discovered during testing.	Prioritize findings by severity, determine root causes, evaluate business impact.	Findings Report
+7. Reporting	Communicate results to management.	Write executive summary, technical findings, recommendations, risk ratings, compliance status.	Final Audit Report
+8. Remediation	Fix identified security issues.	Apply patches, improve policies, update configurations, implement new controls.	Remediation Plan
+9. Follow-Up Audit	Verify corrective actions were completed.	Re-test vulnerabilities, confirm controls are effective, close findings.	Follow-Up Report
+Security Audit Checklist
+1. Define Scope
+Identify systems
+Identify networks
+Identify applications
+Identify cloud services
+Determine audit objectives
+Define success criteria
+2. Review Documentation
+Security Policies
+Incident Response Plan
+Disaster Recovery Plan
+Business Continuity Plan
+Network Diagrams
+Asset Inventory
+User Access Lists
+3. Assess Administrative Controls
+Security Awareness Training
+Acceptable Use Policy
+Password Policy
+Access Control Policy
+Vendor Management
+Risk Management Process
+4. Assess Technical Controls
+Firewalls
+Antivirus/EDR
+Multi-Factor Authentication (MFA)
+Intrusion Detection/Prevention Systems (IDS/IPS)
+Encryption
+Secure Backups
+Endpoint Security
+Patch Management
+Vulnerability Management
+Logging & Monitoring
+5. Assess Physical Controls
+Badge Access
+Locked Server Rooms
+Security Cameras
+Visitor Logs
+Environmental Controls
+UPS/Battery Backup
+Fire Suppression Systems
+6. Test Security Controls
+Vulnerability Scan
+Configuration Review
+Password Audit
+Access Review
+Log Review
+Penetration Test (authorized)
+Wireless Security Test
+Backup Recovery Test
+7. Evaluate Compliance
+
+Common frameworks checked during audits include:
+
+NIST Cybersecurity Framework (CSF)
+NIST SP 800-53
+OWASP Top 10
+CIS Critical Security Controls
+ISO/IEC 27001
+PCI DSS
+HIPAA
+SOC 2
+Common Audit Findings
+Severity	Description	Example
+Critical	Immediate risk to the organization	Domain Admin account with no MFA
+High	Serious weakness requiring prompt action	Unpatched internet-facing server
+Medium	Moderate risk	Weak password policy
+Low	Minor issue	Incomplete documentation
+Informational	Recommendation only	Improve log retention
+Audit Evidence
+
+Auditors collect evidence such as:
+
+Security policies
+System configurations
+Firewall rules
+Screenshots
+User account lists
+Access logs
+Vulnerability scan reports
+Patch reports
+Backup reports
+Interview notes
+Final Audit Report Structure
+Executive Summary
+Audit Scope
+Audit Objectives
+Methodology
+Findings
+Risk Ratings
+Recommendations
+Remediation Plan
+Conclusion
+Security Audit Flow (Easy to Memorize)
+1. Plan
+      ↓
+2. Gather Information
+      ↓
+3. Assess Risks
+      ↓
+4. Review Controls
+      ↓
+5. Test Controls
+      ↓
+6. Analyze Findings
+      ↓
+7. Report Results
+      ↓
+8. Remediate Issues
+      ↓
+9. Follow-Up Review
+Quick Exam Tip
+
+A simple way to remember the sequence is:
+
+Plan → Gather → Assess → Evaluate → Test → Analyze → Report → Remediate → Verify
