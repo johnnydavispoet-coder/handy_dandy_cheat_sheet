@@ -1,0 +1,139 @@
+OWASP Security Principle	Purpose	Key Requirements / Controls	Example
+Minimize Attack Surface Area	Reduce the number of possible attack points.	• Disable unused services
+• Remove unnecessary features
+• Close unused ports
+• Limit exposed APIs	A web server only exposes ports 80 and 443 instead of every open port.
+Principle of Least Privilege	Give users and applications only the permissions they need.	• Role-Based Access Control (RBAC)
+• Separate admin/user accounts
+• Time-limited privileges
+• Regular permission reviews	A customer account cannot access the admin dashboard.
+Defense in Depth	Use multiple layers of security instead of relying on one control.	• Firewalls
+• MFA
+• Endpoint protection
+• IDS/IPS
+• Encryption	Even if a password is stolen, MFA prevents unauthorized access.
+Fail Securely	If something fails, it should fail in a secure state.	• Default deny access
+• Graceful error handling
+• No sensitive error messages	If authentication fails, the user is denied access rather than being logged in accidentally.
+Secure by Default	Systems should be secure without requiring users to enable security features.	• Strong default settings
+• Disabled unnecessary services
+• Default-deny configurations	A new application requires HTTPS by default.
+Separation of Duties	Divide responsibilities so no single person has complete control.	• Dual approval
+• Administrative separation
+• Change management	One employee submits a code change while another reviews and approves it.
+Keep Security Simple	Simple systems are easier to understand, maintain, and secure.	• Clear code
+• Simple configurations
+• Avoid unnecessary complexity	A simple authentication flow is easier to audit than a highly customized one.
+Fix Security Issues Correctly	Solve the root cause instead of applying temporary fixes.	• Root cause analysis
+• Secure coding practices
+• Regression testing	Developers fix the vulnerable SQL query rather than filtering only one malicious input.
+Don't Trust External Systems	Treat all external input and systems as untrusted.	• Input validation
+• Output encoding
+• API validation
+• Third-party verification	A web application validates every form submission before processing it.
+Security as a Business Requirement	Security should be built into every stage of development and operations.	• Security requirements
+• Threat modeling
+• Secure SDLC
+• Risk assessments	Security reviews are required before new software is deployed.
+Quick Memory Guide
+Principle	Simple Phrase
+Minimize Attack Surface	Expose less
+Least Privilege	Give only what's needed
+Defense in Depth	Multiple layers
+Fail Securely	Deny by default
+Secure by Default	Start secure
+Separation of Duties	Share responsibility
+Keep Security Simple	Simpler is safer
+Fix Security Correctly	Fix the root cause
+Don't Trust External Systems	Validate everything
+Security as a Business Requirement	Build security in
+Examples of Security Controls
+Security Control	Related Principle(s)
+Multi-Factor Authentication (MFA)	Defense in Depth, Least Privilege
+Role-Based Access Control (RBAC)	Least Privilege
+Firewalls	Defense in Depth
+Input Validation	Don't Trust External Systems
+Output Encoding	Don't Trust External Systems
+Code Reviews	Fix Security Issues Correctly
+Threat Modeling	Security as a Business Requirement
+Secure Defaults	Secure by Default
+Dual Approval for Deployments	Separation of Duties
+Disable Unused Services	Minimize Attack Surface Area
+Real-World Examples
+Scenario	OWASP Principle
+Closing unused network ports	Minimize Attack Surface Area
+Employees only access systems required for their job	Least Privilege
+Firewall + MFA + antivirus working together	Defense in Depth
+Invalid login attempts always deny access	Fail Securely
+HTTPS enabled automatically	Secure by Default
+Two people approve production deployments	Separation of Duties
+Simplifying authentication logic	Keep Security Simple
+Rewriting vulnerable code instead of patching symptoms	Fix Security Issues Correctly
+Sanitizing user input before database queries	Don't Trust External Systems
+Including security testing throughout software development	Security as a Business Requirement
+OWASP Secure Design Workflow
+Plan Securely
+      │
+      ▼
+Minimize Attack Surface
+      │
+      ▼
+Apply Least Privilege
+      │
+      ▼
+Use Defense in Depth
+      │
+      ▼
+Fail Securely
+      │
+      ▼
+Secure by Default
+      │
+      ▼
+Separate Duties
+      │
+      ▼
+Keep It Simple
+      │
+      ▼
+Fix Root Causes
+      │
+      ▼
+Validate External Input
+      │
+      ▼
+Treat Security as a Business Requirement
+Interview-Friendly Definitions
+Question	Answer
+What is the Principle of Least Privilege?	Users, applications, and services should have only the minimum permissions needed to perform their tasks.
+What is Defense in Depth?	Protecting systems with multiple layers of security so one failed control doesn't compromise the entire system.
+Why Minimize the Attack Surface?	Reducing exposed functionality lowers the number of opportunities an attacker has to exploit a system.
+What does Fail Securely mean?	When errors occur, systems should default to a secure state rather than granting unintended access.
+Why is Security by Default important?	Secure default configurations reduce the chance of vulnerabilities caused by misconfiguration.
+Study Checklist
+Secure Design
+☐ Minimize Attack Surface Area
+☐ Least Privilege
+☐ Defense in Depth
+☐ Fail Securely
+☐ Secure by Default
+Development Practices
+☐ Separation of Duties
+☐ Keep Security Simple
+☐ Fix Security Issues Correctly
+☐ Validate All External Input
+☐ Build Security into the SDLC
+Memory Tip
+
+Think of the principles as answering these questions:
+
+What can attackers reach? → Minimize Attack Surface
+Who should have access? → Least Privilege
+What if one defense fails? → Defense in Depth
+What happens when something breaks? → Fail Securely
+How should the system start? → Secure by Default
+Who approves sensitive actions? → Separation of Duties
+Can it be simpler? → Keep Security Simple
+Did we fix the cause? → Fix Security Issues Correctly
+Can we trust this input? → Don't Trust External Systems
+Is security built into the process? → Security as a Business Requirement
