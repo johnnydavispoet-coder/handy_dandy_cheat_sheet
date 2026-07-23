@@ -1,0 +1,106 @@
+CIA Principle	Purpose	Key Controls / Requirements	Example
+Confidentiality	Ensure information is only accessible to authorized users.	• Access control (RBAC/ABAC)
+• Multi-Factor Authentication (MFA)
+• Encryption (data at rest and in transit)
+• Strong passwords
+• Data classification
+• Least privilege
+• VPNs	Only HR staff can access employee payroll records, and the files are encrypted.
+Integrity	Ensure data remains accurate, complete, and unaltered.	• Hashing (SHA-256, SHA-3)
+• Digital signatures
+• Checksums
+• File permissions
+• Version control
+• Audit logs
+• Input validation	A downloaded software installer is verified with its SHA-256 hash before installation.
+Availability	Ensure systems and data are accessible when needed.	• Backups
+• Redundancy
+• Load balancing
+• Disaster Recovery (DR)
+• Business Continuity Planning (BCP)
+• UPS and generators
+• DDoS protection
+• Monitoring	A company restores its website from backups after a server failure.
+Quick Memory Guide
+CIA Principle	Simple Phrase
+Confidentiality	Keep secrets secret
+Integrity	Keep data accurate
+Availability	Keep systems running
+Common Security Controls by Principle
+Control	Confidentiality	Integrity	Availability
+Multi-Factor Authentication (MFA)	✅		
+Encryption	✅		
+Role-Based Access Control (RBAC)	✅		
+Least Privilege	✅		
+Hashing		✅	
+Digital Signatures		✅	
+Checksums		✅	
+Audit Logs		✅	
+Version Control		✅	
+Backups			✅
+Load Balancers			✅
+Disaster Recovery Plan			✅
+Business Continuity Plan			✅
+UPS/Generators			✅
+DDoS Protection			✅
+Real-World Examples
+Scenario	CIA Principle
+Encrypting a customer's credit card information	Confidentiality
+Verifying a file with a SHA-256 hash	Integrity
+Restoring a server from backups	Availability
+Requiring MFA for employee logins	Confidentiality
+Keeping audit logs of database changes	Integrity
+Having redundant web servers	Availability
+CIA Triad Workflow
+Information
+      │
+      ▼
+Confidentiality
+      │
+      ▼
+Integrity
+      │
+      ▼
+Availability
+Interview-Friendly Definitions
+Question	Answer
+What is Confidentiality?	Protecting information from unauthorized access.
+What is Integrity?	Ensuring data remains accurate, complete, and unmodified.
+What is Availability?	Making sure systems and information are accessible when authorized users need them.
+Study Checklist
+
+Use this checklist to make sure you understand each principle:
+
+Confidentiality
+☐ Authentication
+☐ Authorization
+☐ Least Privilege
+☐ RBAC
+☐ MFA
+☐ Encryption
+☐ VPNs
+☐ Data Classification
+Integrity
+☐ Hashing (SHA-256/SHA-3)
+☐ Digital Signatures
+☐ Checksums
+☐ Audit Logs
+☐ File Permissions
+☐ Version Control
+☐ Input Validation
+Availability
+☐ Backups
+☐ Redundancy
+☐ High Availability (HA)
+☐ Disaster Recovery (DR)
+☐ Business Continuity (BCP)
+☐ DDoS Protection
+☐ Monitoring
+☐ UPS and Generator Systems
+Memory Tip
+
+A simple way to remember the CIA Triad is:
+
+Confidentiality → Who can see the data?
+Integrity → Can the data be trusted?
+Availability → Can authorized users access the data when they need it?
