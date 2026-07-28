@@ -1,0 +1,21 @@
+| Layer | Name         | Function                                            | Example                           |
+| ----- | ------------ | --------------------------------------------------- | --------------------------------- |
+| **7** | Application  | Provides network services to users and applications | HTTP, FTP, SMTP                   |
+| **6** | Presentation | Translates, encrypts, and compresses data           | SSL/TLS, JPEG, ASCII              |
+| **5** | Session      | Establishes, manages, and terminates sessions       | NetBIOS, RPC                      |
+| **4** | Transport    | Ensures reliable data transfer and error recovery   | TCP, UDP                          |
+| **3** | Network      | Determines routing and logical addressing           | IP, ICMP, Routers                 |
+| **2** | Data Link    | Handles physical addressing and error detection     | Ethernet, MAC addresses, Switches |
+| **1** | Physical     | Transmits raw bits over a medium                    | Cables, Fiber Optics, Hubs        |
+
+# Easy Memory Trick
+All People Seem To Need Data Processing
+(Application → Presentation → Session → Transport → Network → Data Link → Physical)
+
+# Modern networks commonly use the TCP/IP model, which has 4 layers:
+Application Layer
+Transport Layer
+Internet Layer
+Network Access Layer
+
+The TCP/IP model maps roughly to the OSI model and is the basis of the Internet.
