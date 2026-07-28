@@ -1,0 +1,69 @@
+| Layer | Name               | What it does                                            | Examples                         |
+| ----: | ------------------ | ------------------------------------------------------- | -------------------------------- |
+| **4** | **Application**    | Provides network services to applications and users     | HTTP, HTTPS, DNS, SSH, FTP, SMTP |
+| **3** | **Transport**      | Provides end-to-end communication between devices       | **TCP**, UDP                     |
+| **2** | **Internet**       | Handles logical addressing and routing between networks | **IP, ICMP, IPsec**              |
+| **1** | **Network Access** | Handles communication over the physical/local network   | Ethernet, Wi-Fi, ARP             |
+
+# An easy way to remember it:
+┌──────────────────────────────┐
+│ 4. APPLICATION               │
+│    HTTP, HTTPS, DNS, SSH     │
+├──────────────────────────────┤
+│ 3. TRANSPORT                 │
+│    TCP, UDP                  │
+├──────────────────────────────┤
+│ 2. INTERNET                  │
+│    IP, ICMP                  │
+├──────────────────────────────┤
+│ 1. NETWORK ACCESS            │
+│    Ethernet, Wi-Fi, ARP      │
+└──────────────────────────────┘
+
+# How datamoves through layers:
+You type:
+https://example.com
+        ↓
+APPLICATION
+HTTPS / HTTP
+        ↓
+TRANSPORT
+TCP
+        ↓
+INTERNET
+IP
+        ↓
+NETWORK ACCESS
+Ethernet / Wi-Fi
+        ↓
+     Network
+        ↓
+Destination server
+
+# The computer receives it in the opposite direction:
+Network Access
+      ↓
+Internet
+      ↓
+Transport
+      ↓
+Application
+      ↓
+Web application
+
+# how this relates to the 7-layer OSI model:
+| TCP/IP             | OSI equivalent |
+| ------------------ | -------------- |
+| **Application**    | 7 Application  |
+|                    | 6 Presentation |
+|                    | 5 Session      |
+| **Transport**      | 4 Transport    |
+| **Internet**       | 3 Network      |
+| **Network Access** | 2 Data Link    |
+|                    | 1 Physical     |
+
+# memorize this sequence:
+Application → Transport → Internet → Network Access
+
+# And remember the major protocols:
+HTTP/HTTPS → TCP/UDP → IP → Ethernet/Wi-Fi
