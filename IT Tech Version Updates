@@ -1,0 +1,104 @@
+# Version updates reference sheet for Ethical Hacking
+# Sheet made: 07/28/26
+
+# Operating Systems / Server OS
+| Technology         | Current version / release        | What it is                      |
+| ------------------ | -------------------------------- | ------------------------------- |
+| **Debian**         | **13.6 “Trixie”**                | Linux server/desktop OS         |
+| **Ubuntu**         | **26.04 LTS “Resolute Raccoon”** | Linux server/desktop OS         |
+| **Windows Server** | **2025**                         | Microsoft server OS             |
+| **RHEL**           | **10.x**                         | Enterprise Linux                |
+| **Kali Linux**     | Rolling release                  | Penetration-testing Linux       |
+| **Alpine Linux**   | 3.23.x                           | Lightweight server/container OS |
+
+# Web Servers / Reverse Proxies
+| Technology             |   Current version | Learn it for               |
+| ---------------------- | ----------------: | -------------------------- |
+| **Nginx**              | **1.30.x stable** | Web server / reverse proxy |
+| **Apache HTTP Server** |        **2.4.68** | Web server                 |
+| **Microsoft IIS**      |          **10.x** | Windows web server         |
+| **Caddy**              |           **2.x** | Modern web server / HTTPS  |
+| **HAProxy**            |           **3.x** | Load balancing / proxy     |
+| **Traefik**            |           **3.x** | Reverse proxy / containers |
+
+# Network / Remote Access Services
+| Technology    | Current version / standard | Purpose                   |
+| ------------- | -------------------------: | ------------------------- |
+| **OpenSSH**   |                   **10.x** | SSH remote administration |
+| **OpenSSL**   |                    **3.x** | TLS/cryptography          |
+| **BIND**      |                    **9.x** | DNS server                |
+| **dnsmasq**   |                   **2.9x** | DNS/DHCP                  |
+| **Samba**     |                    **4.x** | SMB/CIFS file sharing     |
+| **ISC Kea**   |                    **3.x** | DHCP server               |
+| **WireGuard** |                    **1.x** | VPN                       |
+| **OpenVPN**   |                  **2.6.x** | VPN                       |
+| **Unbound**   |                 **1.24.x** | Recursive DNS resolver    |
+
+# Databases
+| Technology               | Current major version | Type                 |
+| ------------------------ | --------------------: | -------------------- |
+| **PostgreSQL**           |                **18** | Relational SQL       |
+| **MySQL**                |               **9.6** | Relational SQL       |
+| **MariaDB**              |              **12.x** | Relational SQL       |
+| **SQLite**               |               **3.x** | Embedded SQL         |
+| **Redis**                |               **8.x** | In-memory data store |
+| **MongoDB**              |               **8.x** | NoSQL                |
+| **Microsoft SQL Server** |              **2025** | Enterprise SQL       |
+
+# Containers / Cloud Infrastructure
+| Technology         | Current version |
+| ------------------ | --------------: |
+| **Docker Engine**  |      **29.6.2** |
+| **Docker Compose** |         **2.x** |
+| **Kubernetes**     |      **1.34.x** |
+| **Helm**           |         **4.x** |
+| **Podman**         |         **5.x** |
+| **containerd**     |         **2.x** |
+| **Terraform**      |         **1.x** |
+| **Ansible**        |    **Core 2.x** |
+
+# Programming / Web Development
+| Technology          |        Current version |
+| ------------------- | ---------------------: |
+| **Python**          |             **3.14.6** |
+| **Node.js LTS**     |            **24.18.0** |
+| **Node.js Current** |             **26.5.0** |
+| **PHP**             |              **8.5.x** |
+| **Java**            |         **JDK 25 LTS** |
+| **Go**              |             **1.25.x** |
+| **Rust**            |             **1.89.x** |
+| **C**               |   GCC/Clang toolchains |
+| **C++**             | C++23 / C++26 emerging |
+
+# Development / Administration
+| Technology     |    Current generation | Why you should know it       |
+| -------------- | --------------------: | ---------------------------- |
+| **Git**        |                  2.5x | Version control              |
+| **GitHub**     |          Current SaaS | Code hosting                 |
+| **GitLab**     |     Current SaaS/18.x | DevOps / Git                 |
+| **Vim**        |                   9.x | Linux administration         |
+| **Nano**       |                   8.x | Linux administration         |
+| **Bash**       |                   5.x | Linux shell scripting        |
+| **PowerShell** |                   7.x | Windows/Linux administration |
+| **systemd**    |                  25x+ | Linux service management     |
+| **cron**       | 3.x / distro-specific | Scheduled tasks              |
+
+# Cybersecurity / Network Analysis
+| Tool                     | Current version / generation | Purpose                    |
+| ------------------------ | ---------------------------: | -------------------------- |
+| **Nmap**                 |                      **7.x** | Network discovery/scanning |
+| **Wireshark**            |                    **4.6.7** | Packet analysis            |
+| **TShark**               |                    **4.6.7** | CLI packet analysis        |
+| **tcpdump**              |                   **4.99.x** | Packet capture             |
+| **Netcat / Ncat**        |      Current distro versions | Network connections        |
+| **Burp Suite**           |         Current 2026 release | Web security testing       |
+| **OWASP ZAP**            |                      **2.x** | Web security testing       |
+| **Metasploit Framework** |                      **6.x** | Security testing           |
+| **OpenVAS / Greenbone**  | Current 23.x/25.x generation | Vulnerability scanning     |
+| **Nikto**                |                      **2.x** | Web server scanning        |
+| **Gobuster**             |                      **3.x** | Enumeration                |
+| **ffuf**                 |                      **2.x** | Web fuzzing                |
+| **Feroxbuster**          |                      **2.x** | Content discovery          |
+| **SQLmap**               |                    **1.9.x** | SQL injection testing      |
+| **John the Ripper**      |                    **1.9.x** | Password auditing          |
+| **Hashcat**              |                      **7.x** | Password recovery/auditing |
