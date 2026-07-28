@@ -1,0 +1,167 @@
+Think of a data packet like a physical letter. It has:
+
+A header: This is like the envelope, containing the destination IP address, MAC address, and a protocol number that tells the receiving device what to do with the information.
+A body: This is the actual message or content you want to send.
+A footer: This signals to the receiving device that the packet is complete, similar to a signature on a letter.
+In cybersecurity, understanding data packets is crucial because security personnel are interested in network bandwidth (the amount of data a device receives per second) 
+and speed (the rate at which data packets are received). Irregularities in either of these can indicate a network attack.
+
+One common cybersecurity practice related to data packets is packet sniffing, which involves capturing and inspecting data packets across the network. 
+This can be used for legitimate network monitoring or for malicious purposes.
+
+# Illustration of data packets being sent and received
+YOU
+ │
+ │ 1. Application creates data
+ ▼
+APPLICATION LAYER
+ │
+ │ 2. TCP/UDP adds transport information
+ ▼
+TRANSPORT LAYER
+ │
+ │ 3. IP adds source/destination addresses
+ ▼
+NETWORK LAYER
+ │
+ │ 4. Ethernet/Wi-Fi adds MAC addresses
+ ▼
+DATA LINK LAYER
+ │
+ │ 5. Bits travel across physical medium
+ ▼
+PHYSICAL LAYER
+ │
+ ▼
+ROUTER / SWITCH / ISP
+ │
+ │ 6. Packet is forwarded hop-by-hop
+ ▼
+INTERNET
+ │
+ ▼
+DESTINATION SERVER
+ │
+ │ 7. Server unwraps packet
+ ▼
+APPLICATION
+ │
+ │ 8. Server processes request
+ ▼
+RESPONSE PACKETS
+ │
+ ▼
+YOUR COMPUTER
+
+# TCP 3-WAY HANDSHAKE
+Your computer                 Server
+     │                           │
+     │──── SYN ─────────────────>│
+     │                           │
+     │<─── SYN/ACK ──────────────│
+     │                           │
+     │──── ACK ─────────────────>│
+     │                           │
+     │      CONNECTION OPEN       │
+
+## Network Layer
+# IP Packet
+  ┌──────────────────────────────────────┐
+│ IP HEADER                            │
+│                                      │
+│ Source IP:      192.168.1.25         │
+│ Destination IP: 93.184.216.34        │
+│ TTL:             64                  │
+│ Protocol:        TCP                 │
+├──────────────────────────────────────┤
+│ TCP SEGMENT                          │
+│                                      │
+│ Source Port:     53142               │
+│ Destination:     443                 │
+│ Sequence Number                       │
+│ ACK Number                            │
+│ Flags                                 │
+├──────────────────────────────────────┤
+│ APPLICATION DATA                     │
+│                                      │
+│ HTTPS data                           │
+└──────────────────────────────────────┘
+
+# Ehternet/WIFI frame
+┌─────────────────────────────────────┐
+│ Ethernet/Wi-Fi Header               │
+│                                     │
+│ Source MAC:      AA:AA:AA:AA:AA:AA │
+│ Destination MAC: BB:BB:BB:BB:BB:BB │
+├─────────────────────────────────────┤
+│ IP Packet                           │
+│                                     │
+│ Source IP:      192.168.1.25        │
+│ Destination IP: 93.184.216.34       │
+├─────────────────────────────────────┤
+│ TCP Segment                         │
+├─────────────────────────────────────┤
+│ Application Data                    │
+└─────────────────────────────────────┘
+
+# The final result:
+
+                OUTBOUND
+                    │
+                    ▼
+         ┌─────────────────────┐
+         │ APPLICATION DATA    │
+         │ HTTP / HTTPS / DNS  │
+         └──────────┬──────────┘
+                    │
+                    ▼
+         ┌─────────────────────┐
+         │ TRANSPORT           │
+         │ TCP / UDP           │
+         │ Ports               │
+         └──────────┬──────────┘
+                    │
+                    ▼
+         ┌─────────────────────┐
+         │ NETWORK             │
+         │ IP                  │
+         │ Source/Destination  │
+         └──────────┬──────────┘
+                    │
+                    ▼
+         ┌─────────────────────┐
+         │ DATA LINK           │
+         │ Ethernet / Wi-Fi    │
+         │ MAC addresses       │
+         └──────────┬──────────┘
+                    │
+                    ▼
+         ┌─────────────────────┐
+         │ PHYSICAL            │
+         │ Bits                │
+         └──────────┬──────────┘
+                    │
+                    ▼
+              NETWORK
+                    │
+                    ▼
+               SERVER
+                    │
+                    │
+               DECAPSULATION
+                    │
+                    ▼
+         ┌─────────────────────┐
+         │ PHYSICAL            │
+         ├─────────────────────┤
+         │ DATA LINK           │
+         ├─────────────────────┤
+         │ NETWORK             │
+         ├─────────────────────┤
+         │ TRANSPORT           │
+         ├─────────────────────┤
+         │ APPLICATION         │
+         └─────────────────────┘
+                    │
+                    ▼
+                RESPONSE
