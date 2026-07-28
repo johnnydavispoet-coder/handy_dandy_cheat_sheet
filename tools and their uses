@@ -1,0 +1,19 @@
+| Tool          | Usually used during        | Main purpose                           |
+| ------------- | -------------------------- | -------------------------------------- |
+| `whois`       | Recon                      | Domain information                     |
+| `dig`         | Recon                      | DNS investigation                      |
+| `nslookup`    | Recon                      | DNS investigation                      |
+| `nmap`        | Enumeration                | Ports/services/versions                |
+| `curl`        | Recon/Enumeration          | HTTP interaction                       |
+| `ffuf`        | Enumeration                | Fuzzing/discovery                      |
+| `gobuster`    | Enumeration                | Directory/DNS discovery                |
+| `feroxbuster` | Enumeration                | Web content discovery                  |
+| Burp Suite    | Analysis/Exploitation      | Web application testing                |
+| `smbclient`   | Enumeration                | SMB shares                             |
+| `enum4linux`  | Enumeration                | SMB/Windows enumeration                |
+| `ssh`         | Foothold/Post-exploitation | Remote access                          |
+| `linpeas`     | Post-exploitation          | Linux privilege-escalation enumeration |
+| `pspy`        | Post-exploitation          | Observe processes/tasks                |
+| `sudo -l`     | Privilege escalation       | Check sudo permissions                 |
+| `find`        | Post-exploitation          | Locate files/permissions               |
+| `ss`          | Post-exploitation          | Network/socket information             |
