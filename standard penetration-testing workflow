@@ -1,0 +1,130 @@
+| Phase                         | What you're doing                                  | Typical tools                             |
+| ----------------------------- | -------------------------------------------------- | ----------------------------------------- |
+| **1. Scope & Rules**          | Determine what you're authorized to test           | Rules of engagement                       |
+| **2. Reconnaissance**         | Gather information about the target                | `whois`, Google, DNS tools                |
+| **3. Enumeration**            | Discover ports, services, users, directories, etc. | `nmap`, `ffuf`, `gobuster`, `feroxbuster` |
+| **4. Vulnerability Analysis** | Determine what weaknesses may exist                | Nmap scripts, Burp Suite, manual analysis |
+| **5. Exploitation**           | Safely exploit a discovered weakness               | Burp, Metasploit, custom scripts          |
+| **6. Initial Access**         | Obtain a foothold                                  | Shell, web session, credentials           |
+| **7. Post-Exploitation**      | Determine what access you've gained                | Linux/Windows commands                    |
+| **8. Privilege Escalation**   | Move from low privilege to higher privilege        | `sudo`, SUID, services, permissions       |
+| **9. Lateral Movement**       | Move between systems/accounts when authorized      | Credentials, SSH, SMB, etc.               |
+| **10. Objectives / Impact**   | Demonstrate what the vulnerability allows          | Proof of access/data                      |
+| **11. Cleanup**               | Remove test artifacts and restore changes          | Logs/files/accounts as permitted          |
+| **12. Reporting**             | Document findings and remediation                  | Report, evidence, recommendations         |
+
+# Note:
+It's one thing to be able to have the space to download, the ability to download as well as the resources to use tools,
+but it's another thing to know how the tools work. By understanding how tools were built and work you are able to use the tool
+more easily and with better results.
+
+## Examples of workflows
+# Example 1:
+Recon
+   ↓
+Nmap
+   ↓
+80/tcp → Web server
+   ↓
+Directory enumeration
+   ↓
+/admin discovered
+   ↓
+Web application testing
+   ↓
+Credential leak discovered
+   ↓
+SSH access
+   ↓
+Linux enumeration
+   ↓
+Privilege escalation
+   ↓
+Root
+
+# Example 2:
+Recon
+   ↓
+Nmap
+   ↓
+SMB
+   ↓
+Enumeration
+   ↓
+Usernames discovered
+   ↓
+Password attack
+   ↓
+SMB access
+   ↓
+Credential discovery
+   ↓
+SSH
+   ↓
+SUID binary
+   ↓
+Privilege escalation
+
+# Example 3:
+Recon
+ ↓
+Web application
+ ↓
+Source-code analysis
+ ↓
+API endpoint
+ ↓
+Authentication bypass
+ ↓
+Database access
+ ↓
+Credential extraction
+ ↓
+SSH
+ ↓
+Privilege escalation
+
+# Workflows are just information gathering loops
+Nmap
+  ↓
+22 SSH
+80 HTTP
+445 SMB
+  ↓
+What can I learn about each?
+  ↓
+Enumerate
+  ↓
+More information
+  ↓
+Form hypotheses
+  ↓
+Test them
+  ↓
+New information
+  ↓
+Enumerate again
+
+## Remember that workflows need to be changeable and functional
+# A good default workflow to memorize
+1. SCOPE
+   ↓
+2. RECON
+   ↓
+3. ENUMERATE
+   ↓
+4. ANALYZE
+   ↓
+5. EXPLOIT
+   ↓
+6. FOOTHOLD
+   ↓
+7. ENUMERATE AGAIN
+   ↓
+8. PRIVILEGE ESCALATION
+   ↓
+9. OBJECTIVE / IMPACT
+   ↓
+10. CLEANUP
+   ↓
+11. REPORT
