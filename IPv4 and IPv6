@@ -1,0 +1,147 @@
+IPv4 uses 32-bit addresses.
+
+# Example
+192 . 168 . 1 . 25
+ \     \    \    \
+ 8     8    8    8 bits
+
+8 + 8 + 8 + 8 = 32 bits
+
+They're normally written as four decimal numbers separated by periods:
+192.168.1.25
+
+# Examples of IP Addresses
+| Address        | Meaning                                                |
+| -------------- | ------------------------------------------------------ |
+| `127.0.0.1`    | Localhost                                              |
+| `192.168.1.1`  | Common private router address                          |
+| `192.168.1.25` | Example private device                                 |
+| `10.0.0.5`     | Private network address                                |
+| `172.16.0.10`  | Private network address                                |
+| `8.8.8.8`      | Public DNS address operated by Google                  |
+| `0.0.0.0`      | Unspecified / all IPv4 interfaces depending on context |
+
+# IPv4 Ranges
+Router
+192.168.1.1
+      |
+      +---- Laptop
+      |     192.168.1.20
+      |
+      +---- Phone
+      |     192.168.1.21
+      |
+      +---- Chromebook
+            192.168.1.22
+
+## IPv6
+IPv6 Example: 2001:4860:4860::8888
+
+They're represented using hexadecimal:
+There are eight groups:
+
+2001
+0db8
+85a3
+0000
+0000
+8a2e
+0370
+7334
+
+Each group represents 16 bits:
+16 × 8 = 128 bits
+
+| Feature               | IPv4                 | IPv6                                           |
+| --------------------- | -------------------- | ---------------------------------------------- |
+| Version               | 4                    | 6                                              |
+| Address size          | **32-bit**           | **128-bit**                                    |
+| Address format        | Decimal              | Hexadecimal                                    |
+| Example               | `192.168.1.25`       | `2001:db8::1`                                  |
+| Address groups        | 4 octets             | 8 groups                                       |
+| Separator             | `.`                  | `:`                                            |
+| Address space         | ~4.3 billion         | ~3.4 × 10³⁸                                    |
+| Broadcast             | Yes                  | No                                             |
+| Multicast             | Yes                  | Yes                                            |
+| Anycast               | Limited/less central | Built in                                       |
+| ARP                   | Used                 | **Not used**                                   |
+| Neighbor discovery    | ARP                  | **NDP/ICMPv6**                                 |
+| Address configuration | DHCP/manual          | SLAAC/DHCPv6/manual                            |
+| Header                | More complex         | Simplified                                     |
+| Fragmentation         | Routers can fragment | Source handles fragmentation                   |
+| NAT                   | Very common          | Generally unnecessary for address conservation |
+
+With IPv4:
+IP address
+     ↓
+ARP
+     ↓
+MAC address
+
+For example:
+
+192.168.1.20
+      ↓
+"What MAC address has 192.168.1.20?"
+      ↓
+ARP
+      ↓
+AA:BB:CC:DD:EE:FF
+
+Pv6 doesn't use ARP.
+Instead, IPv6 uses Neighbor Discovery Protocol (NDP), which operates using ICMPv6.
+So:
+IPv4
+IP → ARP → MAC
+IPv6
+IP → NDP/ICMPv6 → MAC
+
+                 INTERNET
+                    |
+              Public IPv4
+                    |
+                 Router
+              192.168.1.1
+             /     |      \
+            /      |       \
+     192.168.1.20  .21     .22
+       Laptop      Phone   Chromebook
+
+# Note:
+IPv4 and IPv6 can co-exist:
+IPv4 → disappears → IPv6
+             COMPUTER
+             /      \
+            /        \
+         IPv4        IPv6
+           |            |
+           v            v
+       IPv4 network   IPv6 network
+
+This is called dual stack.
+A computer can have:
+
+IPv4:
+192.168.1.25
+
+IPv6:
+2001:db8::25
+at the same time.
+
+IPv4
+32-bit
+Decimal
+192.168.1.25
+ARP
+Broadcast exists
+NAT commonly used
+
+
+IPv6
+128-bit
+Hexadecimal
+2001:db8::1
+NDP/ICMPv6
+No broadcast
+Huge address space
+
