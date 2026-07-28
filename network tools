@@ -1,0 +1,12 @@
+Basic Network Devices
+
+A hub broadcasts information to every device on a network, similar to a radio tower.
+A switch is more intelligent, making connections between specific devices and only passing data to the intended destination, which enhances security and network performance.
+Connecting Networks and the Internet
+
+A router connects multiple networks, directing information between them based on destination addresses.
+A modem connects your router to the internet, bringing internet access to your local network.
+Virtualization in Networking
+
+Virtualization tools are software programs that perform the functions of physical network devices like hubs, switches, routers, and modems.
+These tools offer cost savings and scalability, and are often provided by cloud service providers.
