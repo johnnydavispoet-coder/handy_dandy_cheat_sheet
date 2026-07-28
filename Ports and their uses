@@ -1,0 +1,45 @@
+# Common TCP/UDP Ports
+20/21   FTP       → File Transfer
+22      SSH       → Secure Remote Administration
+23      Telnet    → Remote Administration (insecure)
+25      SMTP      → Email Sending
+53      DNS       → Domain Name Resolution
+67/68   DHCP      → IP Address Assignment
+80      HTTP      → Web Traffic
+110     POP3      → Email
+123     NTP       → Time Synchronization
+143     IMAP      → Email
+161     SNMP      → Network Monitoring
+389     LDAP      → Directory Services
+443     HTTPS     → Secure Web Traffic
+445     SMB       → Windows File Sharing
+587     SMTP      → Email Submission
+636     LDAPS     → Secure LDAP
+993     IMAPS     → Secure IMAP
+995     POP3S     → Secure POP3
+1433    MSSQL     → Microsoft SQL Database
+3306    MySQL     → MySQL Database
+3389    RDP       → Windows Remote Desktop
+5432    PostgreSQL→ PostgreSQL Database
+5900    VNC       → Remote Desktop
+5985/86 WinRM     → Windows Remote Management
+8080    HTTP      → Alternate Web Server
+8443    HTTPS     → Alternate HTTPS
+27017   MongoDB   → MongoDB Database
+
+# Think of an IP address as the building address and a port as a particular door/service inside the building.
+192.168.1.50:22
+       │     │
+       │     └── Port 22 = SSH
+       │
+       └──────── IP address = particular machine
+
+Note: So when a tool like nmap is used
+
+For example: nmap 192.168.1.50
+and you see: 22/tcp    open    ssh
+80/tcp    open    http
+443/tcp   open    https
+3389/tcp  open    ms-wbt-server
+
+You discover the ports and which are open filtered or closed.
