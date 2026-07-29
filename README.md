@@ -1,3 +1,10 @@
-# Knowledge has to go somewhere so why not use github to store my notes from my classes?
-  These are notes from my Google IT Support and Google CyberSecurity Professional Certifications as well as hack the box challenges, hackerrank and other certification and lab courses
-for IT, Cyber Security and Ethical Hacking. 
+# Notes from my certifications #
+
+<h1 color="red">Note:</h1>
+<p>
+  Contains only academic information. Basically the fundamentals.
+  There is absolutely no exploit scripts or step-by-step methods
+  and the information here should only be used for ethical uses.
+  But if not the basics is the first place to start if you wanted to be a black hat hacker,
+  just saying.
+</p>
