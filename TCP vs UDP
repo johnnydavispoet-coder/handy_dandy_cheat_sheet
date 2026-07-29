@@ -37,3 +37,6 @@ TCP / UDP       ← Transport Layer
 IP              ← Network Layer
     ↓
 Ethernet/Wi-Fi  ← Link Layer
+
+UDP (User Datagram Protocol) is a transport-layer protocol, just like TCP (Transmission Control Protocol). The big difference is that TCP prioritizes reliability, while UDP prioritizes 
+speed and low overhead.
