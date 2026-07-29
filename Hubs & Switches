@@ -1,0 +1,62 @@
+# Hubs
+
+# Hub Characteristics
+| Feature                           | Hub                                       |
+| --------------------------------- | ----------------------------------------- |
+| **OSI Layer**                     | Layer 1 – Physical                        |
+| **Uses MAC addresses**            | ❌ No                                      |
+| **MAC address table**             | ❌ No                                      |
+| **Traffic destination awareness** | ❌ None                                    |
+| **Traffic behavior**              | Sends incoming traffic to all other ports |
+| **Collision domain**              | One shared collision domain               |
+| **Duplex**                        | Typically half-duplex                     |
+| **Security**                      | Poor                                      |
+| **Performance**                   | Low                                       |
+| **Modern Ethernet networks**      | Rare/obsolete                             |
+| **Main purpose**                  | Connect devices and repeat signals        |
+
+# Switches
+| Switch Type            | OSI Layer | What It Does                                                                 | Common Use                    |
+| ---------------------- | --------: | ---------------------------------------------------------------------------- | ----------------------------- |
+| **Unmanaged Switch**   |   Layer 2 | Plug-and-play Ethernet switching with little configuration                   | Home/small office             |
+| **Managed Switch**     | Layer 2/3 | Allows configuration, monitoring, VLANs, security features, etc.             | Business/enterprise           |
+| **Smart Switch**       |   Layer 2 | Provides some management features but is simpler than a fully managed switch | Small/medium businesses       |
+| **Layer 2 Switch**     |   Layer 2 | Uses MAC addresses to forward Ethernet frames                                | LANs                          |
+| **Layer 3 Switch**     |   Layer 3 | Performs switching and routing between networks/VLANs                        | Enterprise networks           |
+| **PoE Switch**         | Layer 2/3 | Provides network connectivity **and electrical power** over Ethernet         | Cameras, APs, VoIP phones     |
+| **PoE+ Switch**        | Layer 2/3 | Provides more power than standard PoE                                        | Wireless APs, cameras, phones |
+| **PoE++ Switch**       | Layer 2/3 | Provides even higher power over Ethernet                                     | High-power network devices    |
+| **Fixed Switch**       | Layer 2/3 | Has a fixed number of ports                                                  | Most business/home networks   |
+| **Modular Switch**     | Layer 2/3 | Allows hardware modules to be added or replaced                              | Enterprise/data centers       |
+| **Stackable Switch**   | Layer 2/3 | Multiple physical switches can operate as one logical system                 | Enterprise networks           |
+| **Data Center Switch** | Layer 2/3 | Designed for high-speed, high-density networking                             | Data centers                  |
+| **Industrial Switch**  | Layer 2/3 | Designed to withstand harsh environments                                     | Industrial networks           |
+| **KVM Switch**         |       N/A | Allows one keyboard, monitor, and mouse to control multiple computers        | Server rooms/IT               |
+
+# Switch Characteristics
+| Feature                           | Switch                                                    |
+| --------------------------------- | --------------------------------------------------------- |
+| **OSI Layer**                     | Usually Layer 2; Layer 3 switches also operate at Layer 3 |
+| **Uses MAC addresses**            | ✅ Yes                                                     |
+| **MAC address table**             | ✅ Yes                                                     |
+| **Learns connected devices**      | ✅ Yes                                                     |
+| **Traffic destination awareness** | ✅ Yes                                                     |
+| **Traffic behavior**              | Sends frames toward the appropriate port                  |
+| **Collision domains**             | Generally one per switch port                             |
+| **Duplex**                        | Typically full-duplex                                     |
+| **Security**                      | Better than hubs                                          |
+| **Performance**                   | High                                                      |
+| **VLAN support**                  | ✅ Managed switches                                        |
+| **PoE support**                   | ✅ Some switches                                           |
+| **Routing**                       | ✅ Layer 3 switches                                        |
+| **Modern Ethernet networks**      | ✅ Extremely common                                        |
+| **Main purpose**                  | Efficiently connect devices on a network                  |
+
+# Quick Memorization
+| Device             | Remember It As                       |
+| ------------------ | ------------------------------------ |
+| **Hub**            | **"Send it everywhere."**            |
+| **Layer 2 Switch** | **"Find the MAC address."**          |
+| **Layer 3 Switch** | **"Switch + route."**                |
+| **Router**         | **"Find the network using IP."**     |
+| **PoE Switch**     | **"Network + power over Ethernet."** |
