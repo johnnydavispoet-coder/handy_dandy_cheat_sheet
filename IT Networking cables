@@ -1,0 +1,130 @@
+# IT & Networking Cables
+| Cable                 | Full Name            | Type                  | Common Use                           | Typical Connector   |
+| --------------------- | -------------------- | --------------------- | ------------------------------------ | ------------------- |
+| **Cat5e**             | Category 5e Ethernet | Twisted-pair          | Ethernet networks, LANs              | RJ-45               |
+| **Cat6**              | Category 6 Ethernet  | Twisted-pair          | Faster Ethernet networks             | RJ-45               |
+| **Cat6a**             | Category 6a Ethernet | Twisted-pair          | 10 Gbps networking                   | RJ-45               |
+| **Cat7**              | Category 7 Ethernet  | Shielded twisted-pair | High-speed networking                | GG45 / RJ-45        |
+| **Cat8**              | Category 8 Ethernet  | Shielded twisted-pair | Data centers, 25/40 Gbps             | RJ-45               |
+| **Coaxial**           | Coaxial Cable        | Copper                | Cable internet, TV, CCTV             | F-type, BNC         |
+| **RG-6**              | Radio Guide 6        | Coaxial               | Cable modem, satellite, TV           | F-type              |
+| **RG-59**             | Radio Guide 59       | Coaxial               | CCTV, older video systems            | BNC                 |
+| **Twinax**            | Twinaxial Cable      | Copper                | Data centers, high-speed connections | SFP+/SFP28-style    |
+| **Fiber Optic**       | Fiber-Optic Cable    | Fiber                 | Long-distance/high-speed networking  | LC, SC, ST, MTP/MPO |
+| **Single-mode Fiber** | SMF                  | Fiber                 | Long-distance networking             | LC / SC             |
+| **Multimode Fiber**   | MMF                  | Fiber                 | LANs/data centers                    | LC / SC             |
+| **DAC**               | Direct Attach Copper | Copper                | Server-to-switch connections         | SFP+/SFP28/QSFP     |
+| **AOC**               | Active Optical Cable | Fiber                 | High-speed data center connections   | SFP+/QSFP           |
+
+Computer & Peripheral Cables
+| Cable             | Full Name                    | Common Use                        | Typical Connector |
+| ----------------- | ---------------------------- | --------------------------------- | ----------------- |
+| **USB-A**         | Universal Serial Bus Type-A  | PCs, keyboards, mice, storage     | USB-A             |
+| **USB-B**         | Universal Serial Bus Type-B  | Printers, scanners                | USB-B             |
+| **Micro-USB**     | Micro Universal Serial Bus   | Older phones, devices             | Micro-USB         |
+| **Mini-USB**      | Mini Universal Serial Bus    | Older cameras/devices             | Mini-USB          |
+| **USB-C**         | Universal Serial Bus Type-C  | Phones, laptops, docks, displays  | USB-C             |
+| **Thunderbolt 3** | Thunderbolt 3                | High-speed peripherals/displays   | USB-C             |
+| **Thunderbolt 4** | Thunderbolt 4                | Docks, displays, storage          | USB-C             |
+| **Thunderbolt 5** | Thunderbolt 5                | High-speed storage/displays/docks | USB-C             |
+| **Lightning**     | Apple Lightning              | Older Apple devices               | Lightning         |
+| **FireWire 400**  | IEEE 1394                    | Older cameras/storage             | 6-pin FireWire    |
+| **FireWire 800**  | IEEE 1394b                   | Older high-speed peripherals      | 9-pin FireWire    |
+| **SATA**          | Serial ATA                   | Internal HDDs/SSDs                | SATA data         |
+| **SATA Power**    | SATA Power Cable             | Powers SATA drives                | 15-pin SATA       |
+| **IDE/PATA**      | Integrated Drive Electronics | Older hard drives/optical drives  | 40-pin            |
+| **Floppy Cable**  | Floppy Disk Drive Cable      | Older floppy drives               | 34-pin            |
+| **Molex**         | Molex Power Connector        | Older HDDs/fans/optical drives    | 4-pin Molex       |
+
+# Video & Display Cables
+| Cable                 | Full Name                              | Common Use                | Typical Connector |
+| --------------------- | -------------------------------------- | ------------------------- | ----------------- |
+| **HDMI**              | High-Definition Multimedia Interface   | TVs, monitors, consoles   | HDMI              |
+| **Mini HDMI**         | HDMI Type-C                            | Cameras/tablets           | Mini HDMI         |
+| **Micro HDMI**        | HDMI Type-D                            | Small cameras/tablets     | Micro HDMI        |
+| **DisplayPort**       | DisplayPort                            | PC monitors               | DisplayPort       |
+| **Mini DisplayPort**  | Mini DisplayPort                       | Older laptops/monitors    | Mini DP           |
+| **USB-C DisplayPort** | DisplayPort over USB-C                 | Laptops/monitors/docks    | USB-C             |
+| **DVI-D**             | Digital Visual Interface-Digital       | Digital monitors          | DVI               |
+| **DVI-A**             | Digital Visual Interface-Analog        | Analog video              | DVI               |
+| **DVI-I**             | Digital Visual Interface-Integrated    | Digital + analog          | DVI               |
+| **VGA**               | Video Graphics Array                   | Older monitors/projectors | DE-15             |
+| **S-Video**           | Separate Video                         | Older TVs/video equipment | Mini-DIN          |
+| **Component**         | Component Video                        | Older HD video            | RCA               |
+| **Composite**         | Composite Video                        | Older TVs/consoles        | RCA               |
+| **RCA**               | Radio Corporation of America connector | Audio/video               | RCA               |
+
+# Audio Cables
+| Cable                 | Common Use                      | Typical Connector |
+| --------------------- | ------------------------------- | ----------------- |
+| **3.5mm TRS**         | Headphones/stereo audio         | 3.5mm             |
+| **3.5mm TRRS**        | Headsets/microphones            | 3.5mm             |
+| **6.35mm / 1⁄4-inch** | Professional audio/instruments  | 1/4-inch          |
+| **RCA Audio**         | Stereo audio equipment          | RCA               |
+| **XLR**               | Professional microphones/audio  | XLR               |
+| **TOSLINK**           | Digital optical audio           | Optical           |
+| **S/PDIF Coaxial**    | Digital audio                   | RCA               |
+| **MIDI**              | Musical instruments/controllers | 5-pin DIN         |
+
+# Power Cables
+| Cable                 | Common Use                           | Typical Connector |
+| --------------------- | ------------------------------------ | ----------------- |
+| **IEC C13**           | Desktop PCs, monitors, servers       | IEC C13           |
+| **IEC C14**           | Power input on equipment             | IEC C14           |
+| **IEC C19**           | High-power servers/network equipment | IEC C19           |
+| **IEC C20**           | High-power equipment input           | IEC C20           |
+| **ATX 24-pin**        | Motherboard power                    | 24-pin            |
+| **EPS 4/8-pin**       | CPU power                            | 4/8-pin           |
+| **PCIe 6/8-pin**      | Graphics cards                       | 6/8-pin           |
+| **12VHPWR / 12V-2x6** | Modern GPUs                          | 16-pin            |
+| **SATA Power**        | SATA drives                          | 15-pin            |
+| **Molex**             | Older PC components                  | 4-pin             |
+| **USB Power**         | Phones/peripherals                   | USB-A/USB-C/etc.  |
+| **DC Barrel**         | Routers, laptops, electronics        | Barrel connector  |
+
+# Telephone & Legacy Networking
+| Cable                      | Common Use                        | Typical Connector         |
+| -------------------------- | --------------------------------- | ------------------------- |
+| **RJ-11**                  | Telephone lines                   | RJ-11                     |
+| **RJ-12**                  | Telephone/key systems             | RJ-12                     |
+| **RJ-45**                  | Ethernet networking               | 8P8C                      |
+| **RS-232**                 | Serial communications             | DB-9 / DB-25              |
+| **RS-422**                 | Serial communications             | Various                   |
+| **RS-485**                 | Industrial/network communications | Terminal blocks/DB-9/etc. |
+| **DB-9**                   | Serial devices                    | DE-9                      |
+| **DB-25**                  | Parallel/serial devices           | DB-25                     |
+| **Console/Rollover Cable** | Network device configuration      | RJ-45 to DB-9/USB         |
+
+# Network Cable Wiring
+| Cable                         | Purpose                          | Notes                             |
+| ----------------------------- | -------------------------------- | --------------------------------- |
+| **Straight-through Ethernet** | PC → Switch, PC → Router         | Same wiring standard on both ends |
+| **Crossover Ethernet**        | Older PC → PC or Switch → Switch | TX/RX pairs crossed               |
+| **Rollover Cable**            | PC → Router/Switch console port  | Used for device management        |
+| **Patch Cable**               | General Ethernet connections     | Usually short Ethernet cable      |
+| **Patch Fiber**               | Fiber connections                | Fiber equivalent of a patch cable |
+
+# The Big Ones to Memorize for IT
+Cat5e
+Cat6
+Cat6a
+Cat8
+Fiber optic
+Coaxial / RG-6
+USB-A
+USB-C
+HDMI
+DisplayPort
+VGA
+DVI
+RJ-11
+RJ-45
+SATA
+Molex
+PCIe power
+IEC C13
+3.5mm audio
+XLR
+TOSLINK
+RS-232
+Console/rollover cable
