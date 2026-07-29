@@ -1,6 +1,6 @@
 # Notes from my certifications #
 
-<h1 color="red">Note:</h1>
+<h1>Note:</h1>
 <p>
   Contains only academic information. Basically the fundamentals.
   There is absolutely no exploit scripts or step-by-step methods
