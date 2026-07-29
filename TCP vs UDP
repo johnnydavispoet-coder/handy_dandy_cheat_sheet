@@ -1,0 +1,13 @@
+| Feature            | TCP                             | UDP                          |
+| ------------------ | ------------------------------- | ---------------------------- |
+| Full name          | Transmission Control Protocol   | User Datagram Protocol       |
+| Connection         | Connection-oriented             | Connectionless               |
+| Reliability        | ✅ Reliable                      | ❌ No guarantee               |
+| Ordering           | ✅ Keeps packets in order        | ❌ No ordering guarantee      |
+| Retransmission     | ✅ Yes                           | ❌ No                         |
+| Handshake          | ✅ 3-way handshake               | ❌ No handshake               |
+| Speed              | Slower                          | Faster                       |
+| Overhead           | Higher                          | Lower                        |
+| Flow control       | ✅ Yes                           | ❌ No                         |
+| Congestion control | ✅ Yes                           | ❌ No                         |
+| Typical uses       | Web, SSH, email, file transfers | DNS, streaming, gaming, VoIP |
