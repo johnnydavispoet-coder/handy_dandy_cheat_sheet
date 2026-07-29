@@ -11,3 +11,29 @@
 | Flow control       | ✅ Yes                           | ❌ No                         |
 | Congestion control | ✅ Yes                           | ❌ No                         |
 | Typical uses       | Web, SSH, email, file transfers | DNS, streaming, gaming, VoIP |
+
+Your Computer                  Server
+      |                           |
+      | ---- SYN ---------------> |
+      | <--- SYN/ACK ------------ |
+      | ---- ACK ---------------> |
+      |                           |
+      | <--- Data --------------- |
+      | ---- ACK ---------------> |
+      | <--- Data --------------- |
+      | ---- ACK ---------------> |
+
+Your Computer                  Server
+      |                           |
+      | ---- UDP DATA ----------> |
+      | ---- UDP DATA ----------> |
+      | ---- UDP DATA ----------> |
+      | ---- UDP DATA ----------> |
+
+Application
+    ↓
+TCP / UDP       ← Transport Layer
+    ↓
+IP              ← Network Layer
+    ↓
+Ethernet/Wi-Fi  ← Link Layer
