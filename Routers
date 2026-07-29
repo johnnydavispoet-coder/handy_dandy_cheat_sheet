@@ -1,0 +1,52 @@
+| Router Type             | What It Does                                                                  | Common Use                        |
+| ----------------------- | ----------------------------------------------------------------------------- | --------------------------------- |
+| **Home Router**         | Connects devices on a home network to the internet                            | Homes, apartments                 |
+| **SOHO Router**         | Small-office/home-office router with more business features                   | Small businesses, home offices    |
+| **Enterprise Router**   | Handles large amounts of network traffic and complex routing                  | Large companies                   |
+| **Core Router**         | Moves massive amounts of traffic between major parts of a network             | ISPs, data centers                |
+| **Edge Router**         | Connects an organization's network to an outside network                      | Businesses, ISPs                  |
+| **Distribution Router** | Connects different network segments and aggregates traffic                    | Enterprise networks               |
+| **Wireless Router**     | Combines routing with Wi-Fi access                                            | Homes, offices                    |
+| **Virtual Router**      | Router implemented as software rather than dedicated hardware                 | Cloud/data centers                |
+| **Cloud Router**        | Provides routing between cloud networks and other networks                    | AWS, Azure, Google Cloud          |
+| **VPN Router**          | Routes traffic through VPN tunnels and can provide secure remote connectivity | Businesses, remote workers        |
+| **Cellular Router**     | Uses cellular networks such as 4G/5G instead of wired internet                | Remote locations, mobile networks |
+| **Modular Router**      | Allows network interfaces/modules to be added or replaced                     | Enterprise/ISP networks           |
+| **Multiservice Router** | Handles routing plus services such as voice, video, VPN, and security         | Enterprise networks               |
+| **Software Router**     | Uses a computer/server and routing software to perform routing                | Labs, servers, virtualization     |
+| **BGP Router**          | Uses BGP to exchange routing information between autonomous systems           | ISPs, large organizations         |
+| **NAT Router**          | Translates private IP addresses into public IP addresses                      | Homes and businesses              |
+
+<h1>The most important ones to know:</h1>
+Home/Wireless Router
+SOHO Router
+Enterprise Router
+Core Router
+Edge Router
+Virtual/Software Router
+VPN Router
+Cloud Router
+
+💻 Your Computer
+     │
+     │ Packet
+     ▼
+📡 Wi-Fi / Switch
+     │
+     ▼
+🌐 Home Router
+     │
+     │ Routing Table
+     ▼
+🏢 ISP Router
+     │
+     ▼
+🌎 Internet
+     │
+     ▼
+🏢 Destination Router
+     │
+     ▼
+🖥️ Web Server
+
+Computer → Router → Internet → Router → Server
