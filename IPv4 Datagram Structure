@@ -1,0 +1,52 @@
+| Section     | Purpose                      |
+| ----------- | ---------------------------- |
+| IPv4 Header | Routing information          |
+| Payload     | Usually a TCP or UDP segment |
+
++-------------------------------------------+
+|              IPv4 Header                  |
++-------------------------------------------+
+|                                           |
+|     TCP Segment or UDP Segment            |
+|                                           |
++-------------------------------------------+
+
+# IPv4 Header Fields
+| Field              | What it Does                  | Example                     |
+| ------------------ | ----------------------------- | --------------------------- |
+| Version            | IP version                    | IPv4                        |
+| Header Length      | Size of header                | 20 bytes                    |
+| Total Length       | Entire packet size            | 1500 bytes                  |
+| Identification     | Used when fragmenting packets | 5002                        |
+| Flags              | Controls fragmentation        | Don't Fragment              |
+| Fragment Offset    | Position of fragment          | 0                           |
+| TTL (Time To Live) | Prevents endless looping      | 64                          |
+| Protocol           | Next protocol                 | TCP (6), UDP (17), ICMP (1) |
+| Header Checksum    | Detects header errors         | Calculated automatically    |
+| Source IP          | Sender's address              | 192.168.1.10                |
+| Destination IP     | Receiver's address            | 8.8.8.8                     |
+| Options            | Rarely used                   | Security options            |
+
+# Example IPv4 Datagram
+| Field          | Example      |
+| -------------- | ------------ |
+| Source IP      | 192.168.1.25 |
+| Destination IP | 8.8.8.8      |
+| Protocol       | TCP          |
+| TTL            | 64           |
+| Payload        | TCP Segment  |
+
+Visualization:
+
+IPv4 Datagram
+
++--------------------------------------+
+| Source IP: 192.168.1.25              |
+| Destination: 8.8.8.8                 |
+| Protocol: TCP                        |
+| TTL: 64                              |
++--------------------------------------+
+|                                      |
+|      TCP Segment                     |
+|                                      |
++--------------------------------------+
