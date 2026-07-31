@@ -1,0 +1,205 @@
+# IPv4 Classes
+| Class | First Octet Range | Default Subnet Mask | Network Size | Typical Use                    |
+| ----- | ----------------: | ------------------- | -----------: | ------------------------------ |
+| A     |             1–126 | 255.0.0.0 (/8)      |   Very Large | Large organizations, ISPs      |
+| B     |           128–191 | 255.255.0.0 (/16)   |       Medium | Universities, medium companies |
+| C     |           192–223 | 255.255.255.0 (/24) |        Small | Homes and small businesses     |
+| D     |           224–239 | N/A                 |          N/A | Multicast                      |
+| E     |           240–255 | N/A                 |          N/A | Experimental/Research          |
+
+Note: 127.x.x.x is reserved for loopback (localhost), so it is not assigned to devices on a network.
+
+Class A
+Network.Host.Host.Host
+
+Example:
+
+10.20.30.40
+Network ID = 10
+Host ID = 20.30.40
+
+Default subnet mask:
+
+255.0.0.0
+Characteristics
+Up to about 16.7 million hosts per network.
+Used by very large organizations.
+
+Example:
+
+Company Network
+-----------------------
+Server:   10.0.0.1
+Laptop:   10.0.0.15
+Printer:  10.0.0.50
+Class B
+Network.Network.Host.Host
+
+Example:
+
+172.16.45.8
+
+Network ID:
+
+172.16
+
+Host ID:
+
+45.8
+
+Subnet mask:
+
+255.255.0.0
+
+Supports approximately 65,534 hosts per network.
+
+Often used by:
+
+Schools
+Hospitals
+Medium-sized businesses
+Class C
+Network.Network.Network.Host
+
+Example:
+
+192.168.1.25
+
+Network ID:
+
+192.168.1
+
+Host ID:
+
+25
+
+Subnet mask:
+
+255.255.255.0
+
+Supports 254 hosts per network.
+
+Most home routers use Class C private addresses.
+
+Example:
+
+Router
+192.168.1.1
+
+Desktop
+192.168.1.10
+
+Laptop
+192.168.1.15
+
+Phone
+192.168.1.20
+Class D
+
+Used for Multicast.
+
+Example:
+
+239.1.1.1
+
+Instead of sending data to one computer:
+
+Server ---> PC1
+
+or everyone:
+
+Server ---> Entire Network
+
+Multicast sends to only devices that joined the multicast group:
+
+        Server
+           |
+   -----------------
+   |       |       |
+ PC1      PC2     PC3
+          (Joined Group)
+
+Only PC2 receives the multicast traffic.
+
+Common uses:
+
+Live video streaming
+IPTV
+Video conferencing
+Routing protocol updates
+Class E
+
+Range:
+
+240.0.0.0 – 255.255.255.254
+
+Reserved for:
+
+Research
+Experimental networking
+
+These addresses are generally not used on normal networks.
+
+Private IP Address Ranges
+
+These are reserved for internal networks and are not routable on the public Internet.
+
+Class	Private Range
+A	10.0.0.0 – 10.255.255.255
+B	172.16.0.0 – 172.31.255.255
+C	192.168.0.0 – 192.168.255.255
+
+Example home network:
+
+Internet
+    |
+Public IP
+    |
+ Router
+192.168.1.1
+    |
+-------------------------
+|      |       |        |
+PC   Laptop  Phone   TV
+
+All devices use private IPs, while the router communicates with the Internet using a public IP assigned by your ISP.
+
+Quick Memory Trick
+First Number	Class
+1–126	A
+128–191	B
+192–223	C
+224–239	D
+240–255	E
+
+A simple way to remember it is:
+
+A = Huge networks
+B = Medium networks
+C = Small networks (most home networks)
+D = Multicast
+E = Experimental
+Visual Summary
+Class A
+10.0.0.1
+[N][H][H][H]
+
+Class B
+172.16.5.10
+[N][N][H][H]
+
+Class C
+192.168.1.25
+[N][N][N][H]
+
+Class D
+239.1.1.1
+Multicast
+
+Class E
+245.1.1.1
+Experimental
+A few important special addresses to remember
+127.0.0.1 — Loopback (localhost), used to test your own computer's network stack.
+0.0.0.0 — Represents "this network" or an unspecified address; you'll often see it as a default route or when a device doesn't yet have an IP address.
+255.255.255.255 — Limited broadcast address, used to send a packet to all devices on the local network.
