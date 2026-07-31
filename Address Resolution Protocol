@@ -1,0 +1,257 @@
+The Address Resolution Protocol (ARP) is a networking protocol used on IPv4 networks to find the MAC (physical) address of a device when you already know its IP address.
+
+Think of it like this:
+
+IP address = A person's mailing address (where they live)
+MAC address = Their actual name on the mailbox (who receives the mail)
+
+A computer needs the MAC address because Ethernet networks deliver data based on MAC addresses, not IP addresses.
+
+# Where ARP Fits
+| Step        | Uses                              |
+| ----------- | --------------------------------- |
+| Application | Website or program                |
+| TCP/UDP     | Transport                         |
+| IP          | Finds the destination network     |
+| **ARP**     | Finds the destination MAC address |
+| Ethernet    | Sends the frame across the LAN    |
+
+# Example Network
++--------------------+
+| Computer A         |
+| IP: 192.168.1.10   |
+| MAC: AA-AA-AA-AA   |
++--------------------+
+          |
+          |
+      Ethernet Switch
+          |
+          |
++--------------------+
+| Computer B         |
+| IP: 192.168.1.20   |
+| MAC: BB-BB-BB-BB   |
++--------------------+
+
+Computer A knows it wants to send data to 192.168.1.20, but it doesn't know the MAC address.
+That's where ARP comes in.
+
+Step 1: Check the ARP Cache
+
+Every operating system keeps a small table of recently learned IP-to-MAC mappings.
+
+Example:
+
+IP Address	MAC Address
+192.168.1.1	CC-CC-CC-CC
+192.168.1.20	BB-BB-BB-BB
+
+If the address is already here...
+
+✅ No ARP request is needed.
+
+Step 2: Send an ARP Request
+
+If the MAC isn't known, the computer broadcasts a question to everyone.
+
+"Who has IP 192.168.1.20?
+Tell 192.168.1.10"
+
+Broadcast destination:
+
+FF:FF:FF:FF:FF:FF
+
+That MAC address means:
+
+Everyone on this local network, listen.
+
+Step 3: Every Device Receives It
+Computer A
+      |
+      | ARP Request
+      V
+-------------------------
+Switch
+-------------------------
+ |      |       |
+ PC1   PC2    PC3
+
+Every computer checks:
+
+"Is my IP address 192.168.1.20?"
+
+Most say:
+
+No.
+Ignore it.
+
+One says:
+
+Yes!
+That's me.
+Step 4: ARP Reply
+
+Computer B replies directly (unicast):
+
+192.168.1.20 is at
+
+BB-BB-BB-BB
+
+Only Computer A receives this reply.
+
+Step 5: Cache the Result
+
+Computer A stores:
+
+IP	MAC
+192.168.1.20	BB-BB-BB-BB
+
+Now it doesn't have to ask again until the entry expires.
+
+Step 6: Send the Data
+
+Now the Ethernet frame can be built.
+
+Ethernet Header
+
+Destination MAC:
+BB-BB-BB-BB
+
+Source MAC:
+AA-AA-AA-AA
+
+Payload:
+IP Packet
+
+The switch delivers it to the correct device.
+
+Visual Overview
+Computer A
+(IP 192.168.1.10)
+
+        |
+        | Who has 192.168.1.20?
+        |
+        V
+
+FFFFFFFFFFFF
+(Broadcast)
+
+        |
+        V
+
+All devices receive it
+
+        |
+        |
+
+Computer B
+(IP 192.168.1.20)
+
+        |
+        | I do!
+        |
+        V
+
+MAC = BB-BB-BB-BB
+
+        |
+        V
+
+Computer A saves it
+
+        |
+        V
+
+Normal communication begins
+ARP Packet Fields
+
+A simplified ARP packet includes:
+
+Field	Example
+Hardware Type	Ethernet
+Protocol Type	IPv4
+Hardware Length	6 bytes
+Protocol Length	4 bytes
+Operation	Request or Reply
+Sender MAC	AA-AA-AA-AA
+Sender IP	192.168.1.10
+Target MAC	00-00-00-00-00-00 (unknown in a request)
+Target IP	192.168.1.20
+ARP Cache
+
+You can view the ARP cache on most systems.
+
+Linux
+ip neigh
+
+or
+
+arp -a
+
+Example:
+
+192.168.1.1
+    lladdr 00:11:22:33:44:55
+Windows
+arp -a
+Why Is ARP Only for Local Networks?
+
+Routers separate networks.
+
+Suppose you want to reach:
+
+8.8.8.8
+
+Your computer does not ARP for Google's MAC address—that device isn't on your local network.
+
+Instead, it ARPs for the default gateway (your router):
+
+192.168.1.1
+
+Then it sends the packet to the router, which forwards it toward the internet.
+
+ARP vs DNS
+ARP	DNS
+IP → MAC	Domain name → IP
+Local network only	Internet-wide
+Works at the data-link/network boundary	Application-level service
+
+Example:
+
+google.com
+      |
+      V
+DNS
+      |
+      V
+142.250.x.x
+      |
+      V
+ARP
+      |
+      V
+00:11:22:33:44:55
+Security Concerns
+
+Because ARP has no built-in authentication, attackers on the same local network can abuse it.
+
+One common attack is ARP spoofing (ARP poisoning):
+
+An attacker sends fake ARP replies.
+Victims update their ARP cache with the attacker's MAC address.
+Traffic intended for another device is sent to the attacker instead.
+The attacker can inspect, modify, or forward the traffic (a man-in-the-middle attack).
+
+Common defenses include:
+
+Dynamic ARP Inspection (DAI) on managed switches.
+Static ARP entries for critical systems.
+Encrypted protocols such as HTTPS and SSH to protect data even if traffic is intercepted.
+Key Points to Remember
+ARP maps an IPv4 address to a MAC address.
+It is used only on the local network (LAN).
+ARP requests are broadcast to all devices on the LAN.
+ARP replies are unicast back to the requester.
+Devices keep recently learned mappings in an ARP cache to avoid repeated broadcasts.
+On remote destinations, your computer ARPs for the default gateway's MAC address, not the remote host's MAC address.
