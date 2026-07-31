@@ -255,3 +255,17 @@ ARP requests are broadcast to all devices on the LAN.
 ARP replies are unicast back to the requester.
 Devices keep recently learned mappings in an ARP cache to avoid repeated broadcasts.
 On remote destinations, your computer ARPs for the default gateway's MAC address, not the remote host's MAC address.
+
+Think of the ARP table as your computer's address book:
+
+IP Address           MAC Address
+-----------          -----------------
+Mom                  555-1234
+Dad                  555-5678
+
+becomes...
+
+192.168.1.1          00:11:22:33:44:55
+192.168.1.20         BB:BB:BB:BB:BB:BB
+
+Instead of storing people's phone numbers, it stores IP-to-MAC mappings.
