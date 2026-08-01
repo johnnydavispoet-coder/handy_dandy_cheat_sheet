@@ -1,0 +1,87 @@
+In networking, classes are the categories that IP addresses were originally divided into. While modern networks mostly use CIDR (Classless Inter-Domain Routing) today, you'll still see the classes mentioned in cybersecurity, networking courses, and certification exams.
+
+Class A
+First octet: 1–126
+Default subnet mask: 255.0.0.0 (/8)
+Networks: Very few
+Hosts per network: About 16.7 million
+
+Example:
+
+10.0.0.1
+25.100.50.10
+
+Used for: Very large organizations or ISPs.
+
+Class B
+First octet: 128–191
+Default subnet mask: 255.255.0.0 (/16)
+Hosts per network: About 65,534
+
+Example:
+
+172.16.5.10
+150.25.100.1
+
+Used for: Medium to large businesses.
+
+Class C
+First octet: 192–223
+Default subnet mask: 255.255.255.0 (/24)
+Hosts per network: 254
+
+Example:
+
+192.168.1.25
+200.10.5.1
+
+Used for: Small businesses and home networks.
+
+Class D
+First octet: 224–239
+
+Purpose: Multicast
+
+Instead of sending data to one computer, multicast sends it to a group of computers.
+
+Example:
+
+224.0.0.5
+
+Used by routing protocols and streaming applications.
+
+Class E
+First octet: 240–255
+
+Reserved for research and experimental purposes.
+
+Normally, you won't assign these addresses to computers.
+
+Easy Way to Remember
+Class	First Number	Default Mask	Purpose
+A	1–126	/8	Huge networks
+B	128–191	/16	Medium networks
+C	192–223	/24	Small networks
+D	224–239	N/A	Multicast
+E	240–255	N/A	Experimental
+Private IP Ranges
+
+These are used inside private networks and are not routable on the public internet.
+
+Class	Private Range
+A	10.0.0.0 – 10.255.255.255
+B	172.16.0.0 – 172.31.255.255
+C	192.168.0.0 – 192.168.255.255
+What You Need to Know for Cybersecurity
+
+For entry-level certifications and practical work, you should be able to:
+
+Recognize an IP address's class by its first octet.
+Know the common private IP ranges.
+Understand that CIDR notation (such as /24, /16, and /8) has largely replaced classful networking because it allows much more flexible subnetting.
+Recognize common examples like:
+192.168.1.100 → Private Class C
+10.1.2.3 → Private Class A
+172.20.5.5 → Private Class B
+8.8.8.8 → Public Class A
+224.0.0.1 → Class D (multicast)
