@@ -1,0 +1,26 @@
+# ============================================
+# TOR + FIREJAIL + FIREFOX ESR STARTUP CHECK
+# ============================================
+
+echo "=== Checking disk space ==="
+df -h
+
+echo ""
+echo "=== Starting Tor service ==="
+sudo systemctl start tor@default
+
+echo ""
+echo "=== Checking Tor service status ==="
+systemctl status tor@default --no-pager
+
+echo ""
+echo "=== Checking Tor SOCKS5 proxy ==="
+ss -tln | grep 9050
+
+echo ""
+echo "=== Testing Tor connection ==="
+curl --socks5-hostname 127.0.0.1:9050 https://check.torproject.org/api/ip
+
+echo ""
+echo "=== Launching Firefox ESR inside Firejail ==="
+firejail firefox-esr
